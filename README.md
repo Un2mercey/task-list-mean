@@ -7,7 +7,7 @@
 
 ## NodeJS
 
-[download-page]((https://nodejs.org/en/))
+[download-page](https://nodejs.org/en/)
 
 ```
 node -v
@@ -18,7 +18,7 @@ npm -v
 ```
 
 ## Angular CLI
-![](https://q-bit.biz/uploads/article/ang_cli2_1518602695_1538829951.png)
+
 [download-page](https://github.com/angular/angular-cli)
 
 ```
@@ -65,8 +65,8 @@ npm start
 
 ## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Run `ng test` or `npm run test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
 ## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Run `ng e2e` or `npm run e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
