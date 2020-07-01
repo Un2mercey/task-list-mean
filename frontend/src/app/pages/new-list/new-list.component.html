@@ -1,0 +1,25 @@
+<div class="centered-content">
+    <div class="new-item-container">
+        <mat-form-field>
+            <mat-label>Enter a new list title...</mat-label>
+            <input  #newListTitleInput
+                    matInput
+                    color="white"
+                    type="text"
+                    [(ngModel)]="newListTitle"
+                    (keydown.enter)="createNewList()">
+            <button mat-button *ngIf="newListTitle.length" matSuffix mat-icon-button aria-label="Clear" (click)="newListTitle=''">
+              <mat-icon>close</mat-icon>
+            </button>
+        </mat-form-field>
+        <div class="button-bar">
+            <button mat-raised-button color="warn" routerLink='/'>Back</button>
+            <button mat-raised-button 
+                    color="primary" 
+                    class="create" 
+                    [disabled]="!newListTitle.length"
+                    (click)="createNewList()"
+            >Create</button>
+        </div>
+    </div>
+</div>

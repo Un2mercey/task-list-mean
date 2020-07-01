@@ -1,0 +1,66 @@
+html, 
+body {
+    height: 100%;
+    width: 100%;
+    overflow-y: hidden;
+}
+html {
+    // background: linear-gradient(to right top, $theme-dark-main,  $theme-pink-light, $theme-pink-main 50%,  $theme-pink-light, $theme-dark-main);
+    // background: linear-gradient(to right top, #3a6186,  #89253e);
+    // background: linear-gradient(to left top,#200122 55%,  #6f0000, #8d0000, #3c0041);
+    // background: linear-gradient(to top, #20152c, #633e5a, #cb95aa , #fdae55 20%, #658cc8);
+    background: linear-gradient(to top, $pastel-dark-blue, $pastel-blue);
+    background-size: cover;
+    font-family: 'Lato', sans-serif !important;
+}
+body.mat-typography {
+    margin: 0;
+    .title {
+        font-size: 24px;
+        color: $pastel-yellow;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+    }
+    
+    .mat-list-item {
+        color: $light !important;
+    }
+
+    // .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background, .mat-checkbox-checked.mat-accent .mat-checkbox-background {
+    //     background-color: $pastel-yellow-light !important;
+    // }
+
+    .mat-checkbox-checked.mat-accent .mat-checkbox-ripple .mat-ripple-element {
+        opacity: 0.03 !important;
+        background-color: $pastel-yellow !important;
+    }
+    
+    .mat-checkbox-checked.mat-accent .mat-checkbox-background,
+    .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
+        background-color: $pastel-yellow !important;
+    }
+    .mat-checkbox-ripple .mat-ripple-element,
+    .mat-checkbox-checked.mat-accent .mat-checkbox-background {
+        background-color: $pastel-yellow !important;
+    }
+
+    // scrollbar
+    // /* width */
+    // ::-webkit-scrollbar {
+    //     width: 20px;
+    // }
+    // /* Track */
+    // ::-webkit-scrollbar-track {
+    //     box-shadow: inset 0 0 5px grey; 
+    //     border-radius: 10px;
+    // }
+    // /* Handle */
+    // ::-webkit-scrollbar-thumb {
+    //     background: red; 
+    //     border-radius: 10px;
+    // }
+    // /* Handle on hover */
+    // ::-webkit-scrollbar-thumb:hover {
+    //     background: #b30000; 
+    // }
+}

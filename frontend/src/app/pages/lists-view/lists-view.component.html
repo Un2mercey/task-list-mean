@@ -1,0 +1,51 @@
+<div class="centered-content">
+    <div class="task-manager-container">
+        <div class="sidebar">
+            <div class="title">
+                List
+            </div>
+            <mat-list>
+                <mat-list-item *ngFor="let list of lists"
+                                [ngClass]="{ 'completed': list.isCompleted }"
+                                routerLinkActive='is-active'>
+                    <span [routerLink]="['/lists-view', list._id]" class="span">
+                        {{list.title}}
+                    </span>
+                    <button mat-fab color="primary" class="btn-list-remove" (click)="deleteList(list._id)">
+                        <mat-icon>remove</mat-icon>
+                    </button>
+                </mat-list-item>
+            </mat-list>
+            <button mat-raised-button
+                    class="btn-add-list"
+                    routerLink="/new-list">
+                Add list
+            </button>
+        </div>
+        <div class="task-list-container">
+            <div class="title">
+                Tasks of list
+            </div>
+            <div class="task">
+                <mat-list class="tasks-list">
+                    <mat-list-item class="inner-task" *ngFor="let task of tasks">
+                        <span   class="mat-list-item-content-span" 
+                                [ngClass]="{ 'completed' : task.isDone }"
+                                (click)="doneTask(task)"
+                        >{{task.title}}</span>
+                        <mat-checkbox [checked]="task.isDone"></mat-checkbox>
+                        <button mat-fab (click)="deleteTask(task)">
+                            <mat-icon>delete</mat-icon>
+                        </button>
+                    </mat-list-item>
+                </mat-list>
+            </div>
+            <button mat-fab
+                    class="btn-add-task"
+                    [disabled]="isAddTaskBtnDisabled"
+                    routerLink="./new-task">
+                <mat-icon>add</mat-icon>
+            </button>
+        </div>
+    </div>
+</div>

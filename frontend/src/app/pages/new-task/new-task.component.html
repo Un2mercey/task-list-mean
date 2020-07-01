@@ -1,0 +1,26 @@
+<div class="centered-content">
+    <div class="new-item-container">
+        <mat-form-field>
+            <mat-label>Enter a new task title...</mat-label>
+            <input  #newTaskTitleInput
+                    matInput
+                    color="white"
+                    type="text"
+                    cdk-focus-start
+                    [(ngModel)]="newTaskTitle"
+                    (keydown.enter)="createNewTask()">
+            <button mat-button *ngIf="newTaskTitle.length" matSuffix mat-icon-button aria-label="Clear" (click)="newTaskTitle = ''">
+              <mat-icon>close</mat-icon>
+            </button>
+        </mat-form-field>
+        <div class="button-bar">
+            <button mat-raised-button color="warn" (click)="back()">Back</button>
+            <button mat-raised-button 
+                    color="primary" 
+                    class="create" 
+                    [disabled]="!newTaskTitle.length"
+                    (click)="createNewTask()"
+            >Create</button>
+        </div>
+    </div>
+</div>

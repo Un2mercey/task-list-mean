@@ -1,0 +1,167 @@
+ .centered-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    span:focus {
+        outline: unset;
+    }
+    .btn-add-list { 
+        margin-top: auto;
+        font-size: 17px;
+        background-color: $pastel-blue;
+        color: $pastel-brown;
+    }
+    .btn-add-task {
+        left: 87.2%;
+        bottom: 5%;
+        position: absolute;
+        background-color: $pastel-yellow;
+        color: $pastel-brown;
+    }
+    .task-manager-container {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        max-width: 1000px;
+        max-height: 600px;
+        background: linear-gradient(to bottom right, $pastel-dark-blue, $pastel-blue);
+        .completed { 
+            text-decoration: line-through;
+            opacity: 0.65;
+            text-decoration-color: $pastel-ohra;
+            text-decoration-style: double;
+        }
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            width: 250px;
+            padding: 42px;
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+            .mat-list {
+                margin-top: 15px;
+                width: 116%;
+                max-height: calc(460px - 8.5%);
+                overflow-y: auto;
+                overflow-x: hidden;
+                .mat-list-item {
+                    border-radius: 5px;
+                    width: 84%;
+                    cursor: pointer;
+                    &-content {
+                        padding: 0;
+                        border-radius: 5px;
+                        color: $light;
+                        letter-spacing: 1px;
+                        &:hover { 
+                            background: $pastel-blue;
+                            .span { color: $pastel-brown !important; }
+                        }
+                        .span {
+                            width: 100%;
+                            height: 33px;
+                            display: inline-block;
+                            margin-left: -15px;
+                            padding-left: 27px;
+                            margin-top: 13px;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                        }
+                        .btn-list-remove {
+                            width: 30px;
+                            height: 30px;
+                            position: absolute;
+                            top: 8px;
+                            left: 103%;
+                            .mat-button-wrapper { padding: 0; }
+                            .mat-icon {
+                                height: 31px;
+                                width: 28px;
+                            }
+                        }
+                    }  
+                    &.is-active { 
+                        background: $pastel-blue;
+                        .span { color: $pastel-brown !important; }
+                    }
+                }
+            }
+        }
+        .task-list-container {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            padding: 42px;
+            border-top-right-radius: 8px;
+            border-bottom-right-radius: 8px;
+            .task {
+                margin-top: 6px;
+                font-size: 20px;
+                color: $light;
+                .mat-list {
+                    &.tasks-list {
+                        width: 107%;
+                        max-height: calc(600px - 36%);
+                        overflow-x: hidden;
+                        overflow-y: auto;
+                    }
+                    .mat-list-item {
+                        &-content {
+                            padding-top: 0 !important;
+                            &-span {
+                                width: 96%;
+                                height: 33px;
+                                display: inline-block;
+                                margin-left: -15px;
+                                padding-left: 15px;
+                                margin-top: 13px;
+                            }
+                            .mat-checkbox {
+                                margin-top: 12px;
+                            }
+                        }
+                        &.inner-task {
+                            border-radius: 5px;
+                            margin-bottom: 5px;
+                            width: 88%;
+                            cursor: pointer;
+                        }
+                        &:not(.completed) {
+                            transition: box-shadow 0.2s ease, transform 0.2s ease;
+                            &:hover { box-shadow: 0px 4px 0px 0px $pastel-yellow; }
+                            &:active { transform: scale(0.97); }
+                        }
+                        &-content {
+                            display: block;
+                            padding-top: 13px;
+                            background: transparent;
+                            border-radius: 5px;
+                            margin-top: 10px;
+                            .mat-checkbox {
+                                float: right;
+                            }
+                            .mat-fab {
+                                position: absolute;
+                                top: 5px;
+                                width: 36px;
+                                height: 36px;
+                                left: 103%;
+                                .mat-button-wrapper {
+                                    padding: unset;
+                                    .mat-icon {
+                                        height: 29px;
+                                        width: 29px;
+                                        color: $light-gray;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
