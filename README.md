@@ -5,9 +5,11 @@
 - A - Angular
 - N - NodeJS
 
+# Installation
+
 ## NodeJS
 
-[download-page](https://nodejs.org/en/)
+[source](https://nodejs.org/en/)
 
 ```
 node -v
@@ -19,7 +21,7 @@ npm -v
 
 ## Angular CLI
 
-[download-page](https://github.com/angular/angular-cli)
+[source](https://cli.angular.io/)
 
 ```
 ng v
@@ -27,8 +29,9 @@ Angular CLI: 10.0.0
 ...
 ```
 
-## Concurrently packet for NodeJS
+## Concurrently
 
+packet for NodeJS
 [documentation](https://www.npmjs.com/package/concurrently)
 
 ```
@@ -46,27 +49,28 @@ npm i -g concurrently
     - then delete line 2 in backend/db/unmerceydb.js
     - example uri: mongodb+srv://<YOUR_LOGIN>:<YOUR_PASSWORD>@smthng-pyl9d.gcp.mongodb.net/<YOUR_DB_NAME>?retryWrites=true&w=majority
 
-## Download dependencies
+
+# Install application dependencies
 
 ```
 npm i
 ```
 
-## Build
+# Building
 
 Run `ng build` or `npm run build` to build the project.
 
 
-## Start application
+# Running
 
 ```
 npm start
 ```
 
-## Running unit tests
+# Running unit tests
 
 Run `ng test` or `npm run test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+# Running end-to-end tests
 
 Run `ng e2e` or `npm run e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
