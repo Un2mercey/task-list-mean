@@ -1,14 +1,9 @@
 # MEAN application "Task list"
 
-![](https://phpdes.com/wp-content/uploads/2013/04/MongoDB.png)
-![](https://p7.hiclipart.com/preview/545/451/583/node-js-express-js-javascript-solution-stack-web-application-others.jpg)
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/1200px-Angular_full_color_logo.svg.png)
-![](https://img2.freepng.ru/20180619/vjl/kisspng-node-js-angularjs-react-javascript-npm-node-js-5b28f6111cb2c9.1605132215294110891176.jpg)
-
-M - MongoDB
-E - Express
-A - Angular
-N - NodeJS
+- M - MongoDB
+- E - Express
+- A - Angular
+- N - NodeJS
 
 ## NodeJS
 
