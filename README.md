@@ -54,7 +54,7 @@ npm i
 
 ## Build
 
-Run `ng build` or `npm build` to build the project.
+Run `ng build` or `npm run build` to build the project.
 
 
 ## Start application
