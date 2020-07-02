@@ -28,6 +28,14 @@ ng v
 Angular CLI: 10.0.0
 ...
 ```
+## Nodemon
+
+packet for NodeJS
+[documentation](https://www.npmjs.com/package/nodemon)
+
+```
+npm i -g nodemon
+```
 
 ## Concurrently
 
